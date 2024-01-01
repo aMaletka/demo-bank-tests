@@ -1,12 +1,8 @@
-import { expect, test } from "@playwright/test"
+import { test } from "@playwright/test"
 import { getUserCredentials } from "../builders/UserBuilder"
 import { loginToAccount } from "../support/Helpers"
 import { DashboardPage } from "../page-objects/DashboardPage"
-import { PaymentsPage } from "../page-objects/PaymentsPage"
-import {
-  getPaymentsData,
-  getQuickPaymentData,
-} from "../builders/PaymentBuilder"
+import { getPaymentsData } from "../builders/PaymentBuilder"
 
 test.describe("Correct payments", () => {
   test("When the user makes a correct transfer and adds the recipient as trusted, then recipient is visible on the list", async ({
