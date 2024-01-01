@@ -42,6 +42,7 @@ export class PaymentsPage extends BasePage {
     this.titleError = page.getByTestId("error-form-title")
     this.cancelButton = page.getByRole("link", { name: "anuluj" })
   }
+
   public async verifyClearInputsForm(): Promise<void> {
     await expect(this.receiverName).toBeEmpty()
     await expect(this.accountNumber).toBeEmpty()

@@ -12,6 +12,7 @@ test.describe("Login page", () => {
     await expect(page).toHaveURL("/pulpit.html")
     await expect(dashboardPage.username).toBeVisible()
   })
+
   test("When user log in with incorrect login and incorrect password then user sees error messages", async ({
     page,
   }) => {

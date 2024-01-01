@@ -17,9 +17,11 @@ export class LoginPage {
     this.loginError = page.getByTestId("error-login-id")
     this.passwordError = page.getByTestId("error-login-password")
   }
+
   public async goTo(): Promise<void> {
     await this.page.goto("/")
   }
+
   public async login({ username, password }: Credentials): Promise<void> {
     await this.loginInput.fill(username)
     await this.passwordInput.fill(password)
@@ -33,11 +35,13 @@ export class LoginPage {
     await this.loginInput.fill(username)
     await this.passwordInput.fill(password)
   }
+
   public async verifyMandatoryFieldsErrorMessage(): Promise<void> {
     await this.loginInput.click()
     await expect(this.loginError).toBeVisible()
     await expect(this.passwordError).toBeVisible()
   }
+
   public async clearLoginAndPassword(): Promise<void> {
     await this.loginInput.clear()
     await this.passwordInput.clear()
