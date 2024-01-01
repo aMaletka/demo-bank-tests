@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test"
 import { getUserCredentials } from "../builders/UserBuilder"
-import { getRandomPhoneNumber, loginToAccount } from "../Support/Helpers"
+import { getRandomPhoneNumber, loginToAccount } from "../support/Helpers"
 import { DashboardPage } from "../page-objects/DashboardPage"
 import { PhonePaymentsPage } from "../page-objects/PhonePaymentsPage"
 import { getQuickPaymentData, getTopUpValues } from "../builders/PaymentBuilder"

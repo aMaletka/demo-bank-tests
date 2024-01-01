@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test"
 import { LoginPage } from "../page-objects/LoginPage"
 import { getUserCredentials } from "../builders/UserBuilder"
 import { DashboardPage } from "../page-objects/DashboardPage"
-import { loginToAccount } from "../Support/Helpers"
+import { loginToAccount } from "../support/Helpers"
 
 test.describe("Login page", () => {
   test("User can login with valid credentials", async ({ page }) => {

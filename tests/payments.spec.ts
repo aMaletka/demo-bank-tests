@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test"
 import { getUserCredentials } from "../builders/UserBuilder"
-import { loginToAccount } from "../Support/Helpers"
+import { loginToAccount } from "../support/Helpers"
 import { DashboardPage } from "../page-objects/DashboardPage"
 import { PaymentsPage } from "../page-objects/PaymentsPage"
 import {

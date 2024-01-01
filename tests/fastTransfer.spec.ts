@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test"
 import { getUserCredentials } from "../builders/UserBuilder"
 import { DashboardPage } from "../page-objects/DashboardPage"
-import { loginToAccount } from "../Support/Helpers"
+import { loginToAccount } from "../support/Helpers"
 import { getQuickPaymentData } from "../builders/PaymentBuilder"
 
 test.describe("Fast transfers", () => {
