@@ -1,11 +1,11 @@
-import { expect, test } from "@playwright/test"
+import { test } from "@playwright/test"
 import { getUserCredentials } from "../builders/UserBuilder"
 import { DashboardPage } from "../page-objects/DashboardPage"
 import { loginToAccount } from "../support/Helpers"
 import { getQuickPaymentData } from "../builders/PaymentBuilder"
 
 test.describe("Fast transfers", () => {
-  test("When user does correctly a quick transfer then his avaiable funds are updated.", async ({
+  test("When user does correctly a quick transfer then his available funds are updated.", async ({
     page,
   }) => {
     const user = getUserCredentials(8, 8)

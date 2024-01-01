@@ -11,8 +11,7 @@ test.describe("Phone transfers", () => {
     const quickPaymentData = getQuickPaymentData()
     await loginToAccount(page, user)
     const dashboardPage = new DashboardPage(page)
-    await dashboardPage.goToQuickPhoneTransfer()
-    const phonePaymentsPage = new PhonePaymentsPage(page)
+    const phonePaymentsPage = await dashboardPage.goToQuickPhoneTransfer()
     await phonePaymentsPage.fillForm(quickPaymentData.moneyValue)
     await phonePaymentsPage.closeModal()
     await expect(phonePaymentsPage.messageText).toContainText(
@@ -42,7 +41,7 @@ test.describe("Phone transfers", () => {
     }
   })
 
-  test("The user changes the phone number, selects the top-up amount and performs the top-up", async ({
+  test("Given user when select phone number, top-up amount then perform the top-up correctly", async ({
     page,
   }) => {
     const user = getUserCredentials(8, 8)
